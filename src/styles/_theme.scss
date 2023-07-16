@@ -1,0 +1,49 @@
+@import "./colors";
+
+@function color($color-name) {
+  @return map-get($map: $colors, $key: $color-name);
+}
+
+@mixin theme($element) {
+  @if $element == "button" {
+    border-color: color("black");
+  }
+  @if $element == "body" {
+    background-color: color("white");
+    color: color("black");
+  }
+  @if $element == "task" {
+    background-color: color("black-10");
+  }
+  @if $element == "task-form" {
+    background-color: color("black-10");
+    backdrop-filter: blur(0.5rem) saturate(150%);
+  }
+  @if $element == "task-input" {
+    color: color("black");
+  }
+  @if $element == "divider" {
+    background-color: color("black-10");
+  }
+  @media (prefers-color-scheme: dark) {
+    @if $element == "button" {
+      border-color: color("white");
+    }
+    @if $element == "body" {
+      background-color: color("black");
+      color: color("white");
+    }
+    @if $element == "task" {
+      background-color: color("white-10");
+    }
+    @if $element == "task-form" {
+      background-color: color("white-10");
+    }
+    @if $element == "task-input" {
+      color: color("white");
+    }
+    @if $element == "divider" {
+      background-color: color("white-10");
+    }
+  }
+}

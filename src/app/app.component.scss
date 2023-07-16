@@ -1,0 +1,17 @@
+@import "../styles.scss";
+
+.header {
+  @include center-x-y();
+  padding: 0 1.5rem;
+}
+
+.section {
+  @include center-x-y();
+  padding: 0 1.5rem;
+}
+
+.task-list {
+  @include max-width();
+}
+
+

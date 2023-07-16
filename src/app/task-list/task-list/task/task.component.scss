@@ -1,0 +1,17 @@
+@import "../../../../styles.scss";
+
+:host {
+  @include padding();
+
+  @include center-x-y();
+  gap: 0.5rem;
+
+  border-radius: 0.25rem;
+  @include theme("task");
+}
+
+.task-name-container {
+  flex: 1;
+
+  font-size: 1.5rem;
+}

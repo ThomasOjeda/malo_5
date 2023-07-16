@@ -1,0 +1,12 @@
+<form action="">
+  <app-add-task-input
+    (valueChangedEvent)="handleInputChange($event)"
+    class="add-task-input-container"
+  ></app-add-task-input>
+  <app-custom-button
+    [iconPath]="'/assets/check-svgrepo-com.svg'"
+    [iconAlt]="'add task'"
+    (clickedButtonEvent)="handleButtonClick()"
+    class="add-task-btn-container"
+  ></app-custom-button>
+</form>

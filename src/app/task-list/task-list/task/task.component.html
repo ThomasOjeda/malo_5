@@ -1,0 +1,20 @@
+<app-checkbox
+  [checked]="checked"
+  (checkboxEvent)="receiveCheckedEvent($event)"
+></app-checkbox>
+<app-task-name [styleTask]="checked" class="task-name-container">
+  <ng-content></ng-content>
+</app-task-name>
+<app-custom-button
+  [iconPath]="'/assets/clipboard-svgrepo-com.svg'"
+  [iconAlt]="'delete task'"
+></app-custom-button>
+<app-custom-button
+  [iconPath]="'/assets/share-svgrepo-com.svg'"
+  [iconAlt]="'delete task'"
+></app-custom-button>
+<app-custom-button
+  [iconPath]="'/assets/tcan.svg'"
+  [iconAlt]="'delete task'"
+  (clickedButtonEvent)="handleDeleteButtonClick()"
+></app-custom-button>
