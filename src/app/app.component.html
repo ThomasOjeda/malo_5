@@ -1,5 +1,12 @@
 <header class="header">
-  <app-header>ToDo List v1</app-header>
+  <div class="header-container">
+    <app-header>ToDo List v1</app-header>
+    <app-custom-button
+      [iconPath]="'/assets/fullscreen-svgrepo-com.svg'"
+      [iconAlt]="'fullscreen mode'"
+      (clickedButtonEvent)="handleFullscreenButtonClicked()"
+    ></app-custom-button>
+  </div>
 </header>
 
 <main>

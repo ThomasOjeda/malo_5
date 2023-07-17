@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'malo_2';
+  fullscreen: boolean = false;
+  handleFullscreenButtonClicked() {
+    if (document.fullscreenEnabled) {
+      let elem = document.documentElement;
+
+      this.fullscreen = !this.fullscreen;
+      if (this.fullscreen) elem.requestFullscreen();
+      else document.exitFullscreen();
+    }
+  }
 }

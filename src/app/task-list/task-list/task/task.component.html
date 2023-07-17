@@ -3,18 +3,20 @@
   (checkboxEvent)="receiveCheckedEvent($event)"
 ></app-checkbox>
 <app-task-name [styleTask]="checked" class="task-name-container">
-  <ng-content></ng-content>
+  {{ taskName }}
 </app-task-name>
 <app-custom-button
   [iconPath]="'/assets/clipboard-svgrepo-com.svg'"
   [iconAlt]="'delete task'"
+  (clickedButtonEvent)="handleCopyToClickboardButtonClick()"
 ></app-custom-button>
 <app-custom-button
   [iconPath]="'/assets/share-svgrepo-com.svg'"
-  [iconAlt]="'delete task'"
+  [iconAlt]="'share task'"
+  (clickedButtonEvent)="handleShareButtonClick()"
 ></app-custom-button>
 <app-custom-button
   [iconPath]="'/assets/tcan.svg'"
-  [iconAlt]="'delete task'"
+  [iconAlt]="'copy task'"
   (clickedButtonEvent)="handleDeleteButtonClick()"
 ></app-custom-button>

@@ -5,6 +5,14 @@
   padding: 0 1.5rem;
 }
 
+.header-container {
+  box-sizing: border-box;
+  width: 100%;
+  @include max-width();
+  @include padding();
+  @include center-x-y($justify: space-between);
+}
+
 .section {
   @include center-x-y();
   padding: 0 1.5rem;
@@ -13,5 +21,3 @@
 .task-list {
   @include max-width();
 }
-
-
