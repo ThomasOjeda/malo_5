@@ -38,5 +38,7 @@ export class TasksService {
 
   private saveChanges() {
     this.ls.setItem('tasks', JSON.stringify(this.taskList));
+
+    console.log(JSON.stringify(this.taskList));
   }
 }
