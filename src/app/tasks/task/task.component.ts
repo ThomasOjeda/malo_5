@@ -30,6 +30,6 @@ export class TaskComponent {
     this.cbs.copyToClipboard(this.taskName);
   }
   handleShareButtonClick() {
-    this.ss.shareText(this.taskName);
+    this.ss.shareText(this.id.toString());
   }
 }
