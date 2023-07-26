@@ -3,17 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { TaskListModule } from './task-list/task-list.module';
+import { TasksModule } from './tasks/tasks.module';
 import { SharedModule } from './shared/shared.module';
+import { LoginComponent } from './login/login.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LoginComponent, SettingsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
     CoreModule,
-    TaskListModule,
+    TasksModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

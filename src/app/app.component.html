@@ -1,16 +1,1 @@
-<header class="header">
-  <div class="header-container">
-    <app-header>ToDo List v1</app-header>
-    <app-custom-button
-      [iconPath]="'/assets/fullscreen-svgrepo-com.svg'"
-      [iconAlt]="'fullscreen mode'"
-      (clickedButtonEvent)="handleFullscreenButtonClicked()"
-    ></app-custom-button>
-  </div>
-</header>
-
-<main>
-  <section class="section">
-    <app-task-list class="task-list"></app-task-list>
-  </section>
-</main>
+<router-outlet></router-outlet>
