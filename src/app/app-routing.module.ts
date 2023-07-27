@@ -7,11 +7,13 @@ import { SettingsComponent } from './settings/settings.component';
 import { TasksComponent } from './tasks/tasks-component/tasks.component';
 import { TaskDetailsComponent } from './tasks/task-details/task-details.component';
 import { UpdateTaskComponent } from './tasks/update-task/update-task.component';
+import { loggedInGuard } from './guards/logged-in.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: MainPageComponent,
+    canActivate: [loggedInGuard],
     children: [
       {
         path: '',

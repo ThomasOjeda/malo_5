@@ -4,7 +4,7 @@
   @return map-get($map: $colors, $key: $color-name);
 }
 
-@mixin theme($element) {
+@mixin light-theme($element) {
   @if $element == "button" {
     border-color: color("black");
   }
@@ -25,25 +25,41 @@
   @if $element == "divider" {
     background-color: color("black-10");
   }
-  @media (prefers-color-scheme: dark) {
-    @if $element == "button" {
-      border-color: color("white");
+}
+
+@mixin dark-theme($element) {
+  @if $element == "button" {
+    border-color: color("white");
+  }
+  @if $element == "body" {
+    background-color: color("black");
+    color: color("white");
+  }
+  @if $element == "task" {
+    background-color: color("white-10");
+  }
+  @if $element == "task-form" {
+    background-color: color("white-10");
+  }
+  @if $element == "task-input" {
+    color: color("white");
+  }
+  @if $element == "divider" {
+    background-color: color("white-10");
+  }
+}
+
+@mixin theme($element, $user-choice: "system-theme") {
+  @if ($user-choice == "system-theme") {
+    @include light-theme($element);
+    @media (prefers-color-scheme: dark) {
+      @include dark-theme($element);
     }
-    @if $element == "body" {
-      background-color: color("black");
-      color: color("white");
-    }
-    @if $element == "task" {
-      background-color: color("white-10");
-    }
-    @if $element == "task-form" {
-      background-color: color("white-10");
-    }
-    @if $element == "task-input" {
-      color: color("white");
-    }
-    @if $element == "divider" {
-      background-color: color("white-10");
-    }
+  }
+  @if ($user-choice == "light") {
+    @include light-theme($element);
+  }
+  @if ($user-choice == "dark") {
+    @include dark-theme($element);
   }
 }

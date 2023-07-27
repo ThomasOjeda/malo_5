@@ -12,15 +12,18 @@
 <app-custom-button
   [iconPath]="'/assets/clipboard-svgrepo-com.svg'"
   [iconAlt]="'delete task'"
+  buttonType="icon"
   (clickedButtonEvent)="handleCopyToClickboardButtonClick()"
 ></app-custom-button>
 <app-custom-button
   [iconPath]="'/assets/share-svgrepo-com.svg'"
   [iconAlt]="'share task'"
+  buttonType="icon"
   (clickedButtonEvent)="handleShareButtonClick()"
 ></app-custom-button>
 <app-custom-button
   [iconPath]="'/assets/tcan.svg'"
   [iconAlt]="'copy task'"
+  buttonType="icon"
   (clickedButtonEvent)="handleDeleteButtonClick()"
 ></app-custom-button>
