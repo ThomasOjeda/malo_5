@@ -11,6 +11,7 @@ import { AddTaskInputComponent } from './add-task-form/add-task-input/add-task-i
 import { FormsModule } from '@angular/forms';
 import { UpdateTaskComponent } from './update-task/update-task.component';
 import { TaskDetailsComponent } from './task-details/task-details.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AddTaskFormComponent,
@@ -23,7 +24,7 @@ import { TaskDetailsComponent } from './task-details/task-details.component';
     UpdateTaskComponent,
     TaskDetailsComponent,
   ],
-  imports: [CommonModule, SharedModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule, SharedModule],
   exports: [TasksComponent],
 })
 export class TasksModule {}

@@ -17,9 +17,14 @@ export class TasksService {
     return this.taskList;
   }
 
+  getTask(id: number) {
+    return this.taskList[id];
+  }
+
   addTask(task: string) {
     task = task.trim();
-    if (task.length !== 0) this.taskList.unshift({ name: task, done: false });
+    if (task.length !== 0)
+      this.taskList.unshift(new Task(task, task + ' description', false));
 
     this.saveChanges();
   }

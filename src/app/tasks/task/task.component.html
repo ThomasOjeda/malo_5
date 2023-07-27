@@ -2,7 +2,11 @@
   [checked]="checked"
   (checkboxEvent)="receiveCheckedEvent($event)"
 ></app-checkbox>
-<app-task-name [styleTask]="checked" class="task-name-container">
+<app-task-name
+  [styleTask]="checked"
+  class="task-name-container"
+  routerLink="/tasks/{{ this.id }}"
+>
   {{ taskName }}
 </app-task-name>
 <app-custom-button
