@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CustomButtonComponent } from './custom-button/custom-button.component';
-import { DeleteButtonComponent } from './delete-button/delete-button.component';
 
 @NgModule({
-  declarations: [CustomButtonComponent, DeleteButtonComponent],
+  declarations: [CustomButtonComponent],
   imports: [CommonModule],
-  exports: [CustomButtonComponent, DeleteButtonComponent],
+  exports: [CustomButtonComponent],
 })
 export class SharedModule {}
